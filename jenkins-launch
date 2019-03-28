@@ -1,0 +1,11 @@
+#launching JENKINS via DOCKER container
+
+
+docker pull jenkins:1.651.3
+docker volume create --name jenkins-data
+docker run --name jenkins -d -v jenkins-data:/var/jenkins_home -p 8080:8080 -p 5000:5000 jenkins:1.651.3
+docker ps -a
+docker exec -it "container" sh 
+localhost:8080
+
+
